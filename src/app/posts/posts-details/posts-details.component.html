@@ -1,0 +1,38 @@
+<!-- só aparece quando houver dados do post-->
+<div class="post" *ngIf="post != null">
+    <!-- imagem do post -->
+    <div class="post_image text-center"><img [src]="postsService.getImageUrl(post.id)" [alt]="post.caption"
+            [title]="post.caption" /></div>
+    <!-- descrição do post -->
+    <h4 class="mt-2">{{post.caption}}</h4>
+    <hr />
+    <div class="post_desc card-body d-md-flex flex-row justify-content-around">
+        <!-- user que criou o post -->
+        <div class="card-link"><i class="fa fa-user mr-1"></i>{{post.user.name}}</div>
+        <!-- data de criação do post -->
+        <div class="card-link"><i class="fa fa-calendar mr-1"></i>{{post.postedAt | date:"dd/mm/yyyy"}}</div>
+        <!-- numero de likes do post-->
+        <div class="card-link"><i class="fa fa-thumbs-up mr-1"></i>{{post.likes}}</div>
+        <!-- numero de comments do post -->
+        <div class="card-link"><i class="fa fa-comments mr-1"></i>{{post.comments}}</div>
+    </div>
+    <hr />
+    <!-- lista de comentários do post -->
+    <h5>Comentários</h5>
+    <div class="post_comments">
+        <!-- por cada post -->
+        <div class="card mb-3" *ngFor="let comment of comments">
+            <div class="card-body">
+                <!-- comentário -->
+                <p class="card-text">{{comment.text}}</p>
+            </div>
+            <div class="card-body">
+                <!-- utilizador que criou o comentário -->
+                <span class="card-link"><i class="fa fa-user mr-1"></i>{{comment.user.name}}</span>
+                <!-- data de criação do post -->
+                <span class="card-link"><i
+                        class="fa fa-calendar mr-1"></i>{{comment.postedAt | date:"dd/mm/yyyy"}}</span>
+            </div>
+        </div>
+    </div>
+</div>

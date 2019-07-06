@@ -1,0 +1,17 @@
+.post .post_image img{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.d-md-flex {
+    display: flex;
+}
+
+@media screen and ( max-width: 768px) {  
+    .d-md-flex {
+        display: block;
+    }
+    .post .post_desc .card-link {
+        margin-left: 0;
+    }
+}

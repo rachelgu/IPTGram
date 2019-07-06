@@ -1,0 +1,27 @@
+
+.post-block{
+    color: inherit;
+}
+.post-block .card-img-top{
+    max-height: 250px;
+    height: 250px;
+}
+.post-block .card-img-top .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.post-block .card-img-top img{
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    vertical-align:middle;
+}
+
+.post-block .person{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
