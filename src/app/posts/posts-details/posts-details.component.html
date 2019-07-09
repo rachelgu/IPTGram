@@ -10,7 +10,7 @@
         <!-- user que criou o post -->
         <div class="card-link"><i class="fa fa-user mr-1"></i>{{post.user.name}}</div>
         <!-- data de criação do post -->
-        <div class="card-link"><i class="fa fa-calendar mr-1"></i>{{post.postedAt | date:"dd/mm/yyyy"}}</div>
+        <div class="card-link"><i class="fa fa-calendar mr-1"></i>{{post.postedAt | date:"dd/MM/yyyy"}}</div>
         <!-- numero de likes do post-->
         <div class="card-link"><i class="fa fa-thumbs-up mr-1"></i>{{post.likes}}</div>
         <!-- numero de comments do post -->
@@ -31,7 +31,7 @@
                 <span class="card-link"><i class="fa fa-user mr-1"></i>{{comment.user.name}}</span>
                 <!-- data de criação do post -->
                 <span class="card-link"><i
-                        class="fa fa-calendar mr-1"></i>{{comment.postedAt | date:"dd/mm/yyyy"}}</span>
+                        class="fa fa-calendar mr-1"></i>{{comment.postedAt | date:"dd/MM/yyyy"}}</span>
             </div>
         </div>
     </div>
